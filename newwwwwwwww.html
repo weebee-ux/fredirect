@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<script type="text/javascript">
+function redirect() {
+    // Open Google with a specified keyword in a new tab
+    var keyword = "Debt Reduction Plan";
+    var googleSearchURL = "https://www.google.com/search?q=" + encodeURIComponent(keyword);
+    var newTab = window.open(googleSearchURL, '_blank');
+
+    // Check if the new tab was successfully opened
+    if (newTab) {
+        // Redirect to your blog after a delay in the current tab
+        setTimeout(function() {
+            window.location.href = "https://financialsamurai.exblog.jp/32472287/";
+        }, 2000); // Adjust the delay as needed (2000 ms = 2 seconds)
+    } else {
+        // Handle the case where the new tab was blocked
+        alert('Please allow pop-ups for this website to proceed.');
+    }
+}
+</script>
+</head>
+<body onload="redirect()">
+<p>Redirecting you to Google and then to our blog...</p>
+</body>
+</html>
